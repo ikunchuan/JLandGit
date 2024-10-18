@@ -31,3 +31,8 @@ https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.1/Git-2
 2.“git commit -m “备注””将操作提交到本地分支。
 3.“git push origin 所在分支名”将提交的操作推送至远程同名分支。
 
+七、解决命令行中文字符乱码
+1.“git config --global i18n.commitencoding utf-8”设置提交信息的编码为 UTF-8
+2.“git config --global i18n.logoutputencoding utf-8”设置日志输出的编码为 UTF-8
+3.“chcp 65001”设置Windows命令行的编码为 UTF-8，65001是 UTF-8 的代码页。
+
