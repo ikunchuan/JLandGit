@@ -23,11 +23,15 @@ https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.1/Git-2
 五、拉取远程分支文件（查）
 1.“git branch”查看自己在哪个分支。
 2.“git checkout 分支名”切换或创建本地分支。
-3.“git pull origin 所在分支名”将远程分支的最新更改同步到本地分支。“git pull”实际上是“git fetch”和“git merge”的组合。
+3.“git pull origin 所在分支名”将远程分支的最新更改同步到本地分支。
+   “git pull”实际上是“git fetch”和“git merge”的组合。
 
 六、删除远程分支文件（删）
 如果在 Windows 文件管理器中，你删除了仓库中的文件或文件夹，也要在CMD进行这一步操作，不然git不会删除远程的文件。
-1.“git rm 要删除的文件名或文件夹名”将删除操作记入缓存区。rm意为remove。“git add .”会递归添加工作目录中的所有文件（新文件、修改操作和删除操作）。递归可理解为自动寻找。“git add -A”会添加所有文件的更改（新文件、修改操作和删除操作）。-A意为all。“git add -u”只会更新已跟踪文件的更改和删除操作。-u意为update。
+1.“git rm 要删除的文件名或文件夹名”将删除操作记入缓存区。rm意为remove。
+  “git add .”会递归添加工作目录中的所有文件（新文件、修改操作和删除操作）。递归可理解为自动寻找。
+  “git add -A”会添加所有文件的更改（新文件、修改操作和删除操作）。-A意为all。
+  “git add -u”只会更新已跟踪文件的更改和删除操作。-u意为update。
 2.“git commit -m “备注””将操作提交到本地分支。
 3.“git push origin 所在分支名”将提交的操作推送至远程同名分支。
 
