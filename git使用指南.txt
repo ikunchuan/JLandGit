@@ -1,0 +1,33 @@
+一、安装git
+https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.1/Git-2.47.0-64-bit.exe安装后一直下一步直到完成。
+
+二、获取个人SSH登录GitHub
+1.在“C盘/users/用户名/.ssh”中搜索CMD，本地创建一个SSH，使用“ssh-keygen -t rsa -C your_email@example.com”指令，让你设置密码可以不输入，直接Enter。
+2.创建成功后在“C盘/users/用户名/.ssh”找到PUB文件，右键记事本打开，将内容复制。
+3.在首页点击“头像-settings-SSH and GPG keys-New SSH key”，粘贴即可完成。
+  
+三、将远程仓库关联到本地
+1.在桌面右键打开CMD——“在终端中打开”（或者在目标文件夹中搜索CMD）。
+2.“git clone 仓库SSH”将远程仓库关联到本地，呈现出来就是一个文件夹。
+
+四、切换分支和提交文件（增改）
+1.当你需要修改文件时，命令行显示需要告诉它你是谁。根据提示，输入“git config --global user.name “用户名””和“git config --global user.email “your_email@example.com””即可。
+2.“git branch -a”或者“git branch”查看自己在哪个分支。
+3.“git branch -D 分支名”删除本地分支。
+4.“git checkout 分支名”切换或创建本地分支。
+5.添加或更改完文件后，“git add 更改的文件名或其所在文件夹名”将新文件或者更改操作记入缓存区。
+6.“git commit -m “备注””将新文件或者操作提交到本地分支。
+7.“git push origin 所在分支名”将提交的操作推送至远程同名分支。
+8.“git status”查看本地分支是否与远程分支相同。显示“up-to-date”即为没有更改。
+
+五、拉取远程分支文件（查）
+1.“git branch”查看自己在哪个分支。
+2.“git checkout 分支名”切换或创建本地分支。
+3.“git pull origin 所在分支名”将远程分支的最新更改同步到本地分支。“git pull”实际上是“git fetch”和“git merge”的组合。
+
+六、删除远程分支文件（删）
+如果在 Windows 文件管理器中，你删除了仓库中的文件或文件夹，也要在CMD进行这一步操作，不然git不会删除远程的文件。
+1.“git rm 要删除的文件名或文件夹名”将删除操作记入缓存区。rm意为remove。“git add .”会递归添加工作目录中的所有文件（新文件、修改操作和删除操作）。递归可理解为自动寻找。“git add -A”会添加所有文件的更改（新文件、修改操作和删除操作）。-A意为all。“git add -u”只会更新已跟踪文件的更改和删除操作。-u意为update。
+2.“git commit -m “备注””将操作提交到本地分支。
+3.“git push origin 所在分支名”将提交的操作推送至远程同名分支。
+
