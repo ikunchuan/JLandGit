@@ -15,13 +15,13 @@ https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.1/Git-2
 
 四、切换分支和提交文件（增改）
 1.当你需要修改文件时，命令行显示需要告诉它你是谁。
-  根据提示，输入“git config --global user.name “用户名””
-  和“git config --global user.email “your_email@example.com””即可。
+  根据提示，输入“git config --global user.name "用户名"”
+  和“git config --global user.email "your_email@example.com"”即可。
 2.“git branch -a”或者“git branch”查看自己在哪个分支。
 3.“git branch -D 分支名”删除本地分支。
 4.“git checkout 分支名”切换或创建本地分支。
 5.添加或更改完文件后，“git add 更改的文件名或其所在文件夹名”将新文件或者更改操作记入缓存区。
-6.“git commit -m “备注””将新文件或者操作提交到本地分支。
+6.“git commit -m "备注"”将新文件或者操作提交到本地分支。
 7.“git push origin 所在分支名”将提交的操作推送至远程同名分支。
 8.“git status”查看本地分支是否与远程分支相同。显示“up-to-date”即为没有更改。
 
@@ -37,11 +37,17 @@ https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.1/Git-2
   “git add .”会递归添加工作目录中的所有文件（新文件、修改操作和删除操作）。递归可理解为自动寻找。
   “git add -A”会添加所有文件的更改（新文件、修改操作和删除操作）。-A意为all。
   “git add -u”只会更新已跟踪文件的更改和删除操作。-u意为update。
-2.“git commit -m “备注””将操作提交到本地分支。
+2.“git commit -m "备注"”将操作提交到本地分支。
 3.“git push origin 所在分支名”将提交的操作推送至远程同名分支。
 
 七、解决命令行中文字符乱码
+临时解决:（1和2 好像就是git的默认配置不需要改，中文乱码是CMD的问题）
 1.“git config --global i18n.commitencoding utf-8”设置提交信息的编码为 UTF-8
 2.“git config --global i18n.logoutputencoding utf-8”设置日志输出的编码为 UTF-8
 3.“chcp 65001”设置Windows命令行的编码为 UTF-8，65001是 UTF-8 的代码页。
+一劳永逸:（我的CMD默认编码页就不是65001）
+1.修改注册表，快捷键 win+R, 在运行中输入“regedit”
+2.在搜索框输入“计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor”
+3.“右键-新建”，选择“字符串值”，“名称”列填写“autorun”, 数值数据填写“chcp 65001”
+
 
