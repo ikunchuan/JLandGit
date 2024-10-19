@@ -1,8 +1,11 @@
 一、安装git
-https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.1/Git-2.47.0-64-bit.exe安装后一直下一步直到完成。
+https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.1/Git-2.47.0-64-bit.exe
+安装后一直下一步直到完成。
 
 二、获取个人SSH登录GitHub
-1.在“C盘/users/用户名/.ssh”中搜索CMD，本地创建一个SSH，使用“ssh-keygen -t rsa -C your_email@example.com”指令，让你设置密码可以不输入，直接Enter。
+1.在“C盘/users/用户名/.ssh”中搜索CMD，本地创建一个SSH，
+  使用“ssh-keygen -t rsa -C your_email@example.com”指令，
+  让你设置密码可以不输入，直接Enter。
 2.创建成功后在“C盘/users/用户名/.ssh”找到PUB文件，右键记事本打开，将内容复制。
 3.在首页点击“头像-settings-SSH and GPG keys-New SSH key”，粘贴即可完成。
   
@@ -11,7 +14,9 @@ https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.1/Git-2
 2.“git clone 仓库SSH”将远程仓库关联到本地，呈现出来就是一个文件夹。
 
 四、切换分支和提交文件（增改）
-1.当你需要修改文件时，命令行显示需要告诉它你是谁。根据提示，输入“git config --global user.name “用户名””和“git config --global user.email “your_email@example.com””即可。
+1.当你需要修改文件时，命令行显示需要告诉它你是谁。
+  根据提示，输入“git config --global user.name “用户名””
+  和“git config --global user.email “your_email@example.com””即可。
 2.“git branch -a”或者“git branch”查看自己在哪个分支。
 3.“git branch -D 分支名”删除本地分支。
 4.“git checkout 分支名”切换或创建本地分支。
